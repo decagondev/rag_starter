@@ -12,6 +12,8 @@ prompt = "hello world!"
 embeddings = OpenAIEmbeddings(model="text-embedding-3-small")
 
 # Querying the vector database for "relevant" docs then create a retriever
+document_vectorstore = PineconeVectorStore(index_name="pineidx", embedding=embeddings)
+retriever = document_vectorstore.as_retriever()
 
 # create a context by using the retriever and getting the relevant docs based on the prompt
 
