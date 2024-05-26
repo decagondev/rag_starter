@@ -12,4 +12,8 @@ raw_docs = loader.load()
 text_splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=100)
 documents = text_splitter.split_documents(raw_docs)
 print(f"Going to add {len(documents)} to Pinecone")
+
 # Choose the embedding model and vector store 
+embeddings = OpenAIEmbeddings(model="text-embedding-3-small")
+PineconeVectorStore.from_documents(documents=documents, embedding=embeddings, index_name="pineidx")
+print("Loading to vectorstore done")
