@@ -28,3 +28,6 @@ prompt_with_context = template.invoke({"query": prompt, "context": context})
 
 # Asking the LLM for a response from our prompt with the provided context using CatOpenAI and invoking it
 # Then print the results content
+llm = ChatOpenAI(temperature=0.7)
+results = llm.invoke(prompt_with_context)
+print(results.content)
