@@ -17,3 +17,9 @@ This is a Starter Repository for RAG. In this we will be building out a PDF RAG 
 - if it was successful then we can move on to building out the main file logic
 - once we have the main file done try it out `python main.py`
 - if it is working we can build a repl and make the prompt be more useful maybe even choose more pdf files to upload
+
+## Some possible places for PDFs
+- [Wikipedia](https://en.wikipedia.org/wiki/Main_Page)
+- [Wikibooks](https://en.wikibooks.org/wiki/Main_Page)
+- [Python 3 Docs](https://docs.python.org/3/download.html)
+Be creative and think of some more yourself!
