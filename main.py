@@ -16,7 +16,7 @@ document_vectorstore = PineconeVectorStore(index_name="pineidx", embedding=embed
 retriever = document_vectorstore.as_retriever()
 
 # create a context by using the retriever and getting the relevant docs based on the prompt
-
+context = retriever.get_relevant_documents(prompt)
 # show the thought process by looping over all relevant docs, showing the source and the content
 
 
