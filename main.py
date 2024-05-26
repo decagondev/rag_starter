@@ -23,7 +23,8 @@ for doc in context:
     print("__________________________")
 
 # build a prompt template using the query and the context and build the prompt with context
-
+template = PromptTemplate(template="{query} Context: {context}", input_variables=["query", "context"])
+prompt_with_context = template.invoke({"query": prompt, "context": context})
 
 # Asking the LLM for a response from our prompt with the provided context using CatOpenAI and invoking it
 # Then print the results content
