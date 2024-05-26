@@ -9,7 +9,7 @@ from constants import *
 prompt = "hello world!"
 
 # Note: we must use the same embedding model that we used when uploading the docs
-
+embeddings = OpenAIEmbeddings(model="text-embedding-3-small")
 
 # Querying the vector database for "relevant" docs then create a retriever
 
